@@ -1,1 +1,7 @@
+.pio/
 .DS_Store
+# Ignore VS Code files except extension recommendations
+.vscode/*
+!.vscode/extensions.json
+# Local credentials - never commit
+include/secrets.h
