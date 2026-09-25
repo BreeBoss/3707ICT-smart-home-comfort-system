@@ -130,9 +130,8 @@ void loop() {
   }
 
 
-  // =====================================================
+  
   // RULE 1 - Automatic Temperature and Humidity Cooling
-  // =====================================================
 
   // Cooling turns ON when:
   // Motion is detected
@@ -174,9 +173,7 @@ void loop() {
   }
 
 
-  // =====================================================
   // RULE 2 - Smart Lighting
-  // =====================================================
 
   // Motion detected AND room is dark
 
@@ -198,10 +195,7 @@ void loop() {
     digitalWrite(LED_PIN, LOW);
   }
 
-
-  // =====================================================
   // RULE 3 - Five-Minute Auto Light-Off
-  // =====================================================
 
   // Only check inactivity if there is currently
   // no motion and the light is ON
@@ -225,9 +219,7 @@ void loop() {
   }
 
 
-  // =====================================================
   // Display Sensor Readings
-  // =====================================================
 
   Serial.print("Temperature: ");
   Serial.print(data.temperature);
@@ -261,9 +253,7 @@ void loop() {
   Serial.println(" %");
 
 
-  // =====================================================
   // Display Cooling Status
-  // =====================================================
 
   Serial.print("Cooling: ");
 
@@ -278,9 +268,7 @@ void loop() {
   }
 
 
-  // =====================================================
   // Display Lighting Status
-  // =====================================================
 
   Serial.print("Light: ");
 
@@ -298,9 +286,7 @@ void loop() {
   Serial.println("--------------------");
 
 
- // =====================================================
 // Upload to ThingSpeak securely (every 20 seconds)
-// =====================================================
 
 if (WiFi.status() == WL_CONNECTED && millis() - lastUpload >= uploadInterval) {
 
