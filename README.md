@@ -8,7 +8,7 @@ Group Project - Smart Home Comfort System
 |------|-----------|
 | Ayush Lal | S5409751 |
 | Brenda Powi | Sxxx |
-| Jason Gardner | Sxxx |
+| Jason Gardner | S5369290 |
 
 ## Project
 
