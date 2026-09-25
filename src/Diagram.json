@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -38.4, "left": -263.96, "attrs": {} },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -188, "left": -343.38, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -265.6,
+      "left": -287.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 70.6,
+      "left": 95.15,
+      "rotate": 270,
+      "attrs": { "value": "1000" }
+    },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 211.4, "left": -124.8, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -210.9, "left": -466.2, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 174.4,
+      "left": 100.2,
+      "rotate": 180,
+      "attrs": { "color": "red", "flip": "" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": 247.6, "left": 76.8, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:GND.2", "r1:2", "black", [ "v0", "h230.4" ] ],
+    [ "esp:GND.2", "ldr1:GND", "black", [ "v0", "h67.2", "v-153.6" ] ],
+    [ "esp:3V3", "ldr1:VCC", "yellow", [ "h-9.45", "v-38.4", "h182.4", "v-124.8" ] ],
+    [ "esp:34", "ldr1:AO", "green", [ "h-19.05", "v-86.4", "h172.8", "v-86.4" ] ],
+    [ "r1:1", "led1:C", "green", [ "h0" ] ],
+    [ "esp:13", "led1:A", "green", [ "h-19.05", "v57.6", "h201.6", "v-76.8" ] ],
+    [ "esp:5V", "relay1:VCC", "yellow", [ "h0.15", "v38.4" ] ],
+    [ "esp:14", "relay1:IN", "green", [ "h-28.65", "v124.8" ] ],
+    [ "esp:GND.1", "relay1:GND", "black", [ "h-9.45", "v96" ] ],
+    [ "esp:27", "pir1:OUT", "green", [ "h0" ] ],
+    [ "pir1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "esp:3V3", "pir1:VCC", "yellow", [ "h0" ] ],
+    [ "esp:3V3", "dht1:VCC", "yellow", [ "h0" ] ],
+    [ "esp:26", "dht1:SDA", "green", [ "h0" ] ],
+    [ "esp:GND.1", "dht1:GND", "black", [ "h0" ] ],
+    [ "servo1:V+", "relay1:NO", "orange", [ "h-28.8", "v9.7" ] ],
+    [ "servo1:GND", "esp:GND.1", "black", [ "h-38.4", "h-316.8", "v-182.4" ] ],
+    [ "servo1:PWM", "esp:25", "green", [ "h-38.4", "v0.2", "h-336", "v-124.8", "v-76.8" ] ],
+    [ "relay1:COM", "esp:5V", "gold", [ "h30", "v85", "h-326.4", "v-57.6" ] ]
+  ],
+  "dependencies": {}
+}
