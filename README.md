@@ -12,7 +12,7 @@ Group Project - Smart Home Comfort System
 
 ## Project
 
-PlatformIO firmware for the ESP32 DOIT DevKit V1, simulated in Wokwi, in `src/`. It reads DHT sensor data, controls a servo, runs an occupancy model (`occupancy_xgboost.h`) and posts to ThingSpeak over HTTPS.
+PlatformIO firmware for the ESP32 DOIT DevKit V1, simulated in Wokwi, in `src/`. It reads DHT sensor data, controls a servo and posts to ThingSpeak over HTTPS.
 
 ## Setup
 
