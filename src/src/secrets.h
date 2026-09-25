@@ -1,0 +1,7 @@
+#pragma once
+
+#define WIFI_SSID "Wokwi-GUEST"
+
+#define WIFI_PASSWORD ""
+
+#define THINGSPEAK_WRITE_API_KEY "XRJYPCMSHLZG40AC"

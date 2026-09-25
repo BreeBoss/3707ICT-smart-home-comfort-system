@@ -1,3 +1,5 @@
+//include tells the compiler to add libaries to the program 
+
 #include <DHTesp.h>
 #include <ESP32Servo.h>
 #include <WiFi.h>
@@ -43,7 +45,7 @@ unsigned long lastMotionTime = 0;
 
 // 5 minutes = 300,000 milliseconds
 
-const unsigned long INACTIVITY_TIME = 10000;
+const unsigned long INACTIVITY_TIME = 300000;
 
 
 // Light Threshold
@@ -114,7 +116,7 @@ void loop() {
 
   // Convert LDR Reading to Percentage
 
-  int lightPercent = map(ldrRaw, 0, 4095, 0, 100);
+  int lightPercent = map(ldrRaw, 0, 4095, 100, 0);
 
   lightPercent = constrain(lightPercent, 0, 100);
 
