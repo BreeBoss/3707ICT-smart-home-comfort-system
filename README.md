@@ -6,7 +6,7 @@
 | Name | Student ID |
 |---|---|
 | Ayush Lal | S5409751 |
-| Brenda Powi | S5457679|
+| Brenda Powi | S5457769|
 | Jason Gardner | S5369290 |
 
 ## Project Overview
